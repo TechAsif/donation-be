@@ -1,6 +1,14 @@
 
 
 ## Installation
+Node Version: 14.17.3
+```bash
+$ npm install
+```
+
+```bash
+$ npm install
+```
 
 ```bash
 $ npm install
