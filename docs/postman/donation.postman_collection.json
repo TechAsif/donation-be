@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "84709a79-ba44-490e-bd20-c700dac6bd66",
+		"name": "donation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13695267",
+		"_collection_link": "https://warped-crater-160947.postman.co/workspace/b89d1112-f01c-437e-9d77-c6d47c46741c/collection/13695267-84709a79-ba44-490e-bd20-c700dac6bd66?action=share&source=collection_link&creator=13695267"
+	},
+	"item": [
+		{
+			"name": "Get All Donation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3010/donation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"donation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Analytics Summary",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3010/donation/analytics/summary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"donation",
+						"analytics",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "top donors",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3010/donation/analytics/top-donors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"donation",
+						"analytics",
+						"top-donors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recent donation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3010/donation/analytics/recent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"donation",
+						"analytics",
+						"recent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Monthly Analytics",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3010/donation/analytics/monthly",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"donation",
+						"analytics",
+						"monthly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get My All Donation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3010/donation/by-me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"donation",
+						"by-me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find donation by user id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3010/donation/by-user/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"donation",
+						"by-user",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Donation By Donation ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3010/donation/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"donation",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Donation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"amount\": 500000,\n    \"UserId\": 2,\n    \"createdDate\": \"2025-02-10T05:50:57.031Z\",\n    \"updatedDate\": \"2025-02-10T05:50:57.031Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base}}donation",
+					"host": [
+						"{{base}}donation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete A Donation By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"amount\": 500000,\n    \"UserId\": 2,\n    \"createdDate\": \"2025-02-10T05:50:57.031Z\",\n    \"updatedDate\": \"2025-02-10T05:50:57.031Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base}}donation/2",
+					"host": [
+						"{{base}}donation"
+					],
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make Donation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 30000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3010/donation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"donation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

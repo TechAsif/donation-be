@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "dc1a9532-35c5-4d0c-9311-e118c9747b87",
+		"name": "Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13695267",
+		"_collection_link": "https://warped-crater-160947.postman.co/workspace/b89d1112-f01c-437e-9d77-c6d47c46741c/collection/13695267-dc1a9532-35c5-4d0c-9311-e118c9747b87?action=share&source=collection_link&creator=13695267"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/8.6.1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"user@assunnahfoundation.org\",\n\t\"password\": \"afAs`12fjsfj34343sdlfasd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3010/authentication/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"authentication",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Get the response",
+							"var jsonData = pm.response.json();",
+							"",
+							"// Extract the access token",
+							"var token = jsonData.accessToken;",
+							"",
+							"// Set it as a collection or environment variable",
+							"pm.globals.set(\"token\", token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/8.6.1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"admin@assunnahfoundation.org\",\n\t\"password\": \"afAs`12fjsfj34343sdlfasd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base}}authentication/sign-in",
+					"host": [
+						"{{base}}authentication"
+					],
+					"path": [
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authentication/2fa/generate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/8.6.1"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3010/authentication/2fa/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"authentication",
+						"2fa",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Tokens",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/8.6.1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJyZWZyZXNoVG9rZW5JZCI6IjdmNTA3YWE4LTMxZGUtNGI3NS04MzdlLTRjNTU5MGFlOTAxMCIsImlhdCI6MTcyMDg1MjM1NywiZXhwIjoxNzIwOTM4NzU3LCJhdWQiOiJsb2NhbGhvc3Q6MzAwMCIsImlzcyI6ImxvY2FsaG9zdDozMDAwIn0.rK0BIM7MFzcDlfmQjrbAloxpSPx-UbvRjFmSEn1MYZ8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3010/authentication/refresh-tokens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"authentication",
+						"refresh-tokens"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}
