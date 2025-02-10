@@ -51,7 +51,7 @@ $ npm run start:prod
 ## Insert Some demo data and test the all api endpoint using postman or other api client
 
 ### Postman Collection
-You can find our API collection in the [docs/postman](./docs/postman) directory.
+Here is api collection please download it from [docs/postman](./docs/postman) directory.
 
 ### Import Instructions
 1. Download the collection file
