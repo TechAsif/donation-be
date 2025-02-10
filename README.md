@@ -2,6 +2,7 @@
 
 ## Installation
 Node Version: 14.17.3
+Nestjs Version: 10
 ```bash
 $ npm install
 ```
