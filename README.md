@@ -1,4 +1,7 @@
-
+## DB 
+```bash
+$ CREATE DATABASE IF NOT EXISTS assunnah;
+```
 
 ## Installation
 Node Version: 14.17.3
