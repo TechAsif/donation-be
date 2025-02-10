@@ -6,7 +6,6 @@ Node Version: 14.17.3
 $ npm install -g @nestjs/cli@10.0.0
 $ npm install -g ioredis@5.4.1
 $ npm install
-$ npm run start:dev  
 ```
 
 ## Running the app
