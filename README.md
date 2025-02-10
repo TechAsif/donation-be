@@ -48,19 +48,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Insert Some demo data and test the all api endpoint
+## Insert Some demo data and test the all api endpoint using postman or other api client
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
 
 
