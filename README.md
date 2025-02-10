@@ -11,7 +11,7 @@ $ npm install
 ## Create an admin user by script and other user using endpoint
 {
   email: "admin@assunnahfoundation.org",
-  password: "afAs`12fjsfj34343sdlfasd"
+  password: "afAs`12fjsfj34343sdlfasd" // this is the admin password , below we used hash version for script . you can also create admin user by your password
 }
 ```bash
 INSERT INTO assunnah.user (
